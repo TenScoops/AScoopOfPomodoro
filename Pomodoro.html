@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link href="PomodoroCSS.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bef1368c0a.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+</style>
+<body>
+    <div class = "div">
+    
+        <h1>Pomodoro</h1>
+        
+    <div id="container">
+        
+       <div class="panel">
+            <p id="work">Work</p>
+            <p id="break">Break</p>
+       </div>
+       
+        <!--work timer-->
+        <div id="work-timer" class="timer">
+            <div id="circle">
+                <p id="minutes"></p>
+                <p class ="semicolon">:</p>
+                <p id="seconds"></p>
+            </div>
+            <audio id = "breaktime" src="https://cdn.pixabay.com/audio/2022/03/10/audio_3c8872af8b.mp3"></audio>
+            <audio id = "timetowork" src="https://cdn.pixabay.com/audio/2022/10/16/audio_10bebc0b9f.mp3"></audio>
+        </div>
+        
+    </div>
+
+    
+    <!-- buttons -->
+    <div class="controls">
+        <button id="book"><i class="fa-solid fa-book-open"></i></button>
+        <button id="start" ><i class="fa-solid fa-play"></i></button>
+        <button id="pause"><i class="fa-solid fa-pause"></i></button>
+        <button id="reset" href="/"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+        <button id="settings"><i class="fa-solid fa-pencil"></i></button>
+        <audio id ="click"src="https://cdn.pixabay.com/audio/2022/03/15/audio_57ed98e1dc.mp3"></audio>
+        <audio id="joy"src="https://cdn.pixabay.com/audio/2022/03/19/audio_b1e725b098.mp3"></audio>
+    </div>
+    
+</div>
+    <script src = "PomodoroJS.js"></script>
+</body>
+</html>

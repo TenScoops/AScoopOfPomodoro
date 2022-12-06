@@ -1,0 +1,240 @@
+body {
+	background: linear-gradient(to right, #c02558, #2368c2, #9423d5);
+	background-size: 400% 400%;
+	/* animation: gradient 15s ease infinite; */
+    /* background-color: #30384b; */
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: 'Nerko One', cursive;
+    text-align: center;
+    font-size: 100px;
+    margin-right: 40px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    transform: scale(1);
+	animation: pulse 2s infinite;
+    cursor:pointer;
+    margin-top: 80px;
+
+}
+
+h1:hover{
+    color: #438ff1;
+    /* animation-delay: 2s;
+    animation: 4s; */
+    /* transform: translateY(-0.05em);*/
+    transition: 0.05s; 
+    /* transform: scale(1);
+	animation: pulse 2s infinite; */
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		
+	}
+
+	70% {
+		transform: scale(1);
+		
+	}
+
+	100% {
+		transform: scale(0.95);
+		
+	}
+}
+
+#container {
+    height: 89px;
+    width: 700px;
+    /* background-color: #F5E4C3; */
+    margin: 0 auto;
+}
+
+/*timers*/
+.timer {
+    color:white;
+    font-family: 'Nerko One', cursive;
+    font-size: 130px;
+    margin-left: 100px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    font-weight: bold;
+}
+#minutes{
+    margin-left: 23px;
+}
+
+.semicolon{
+    margin-left: 55px;
+    animation: 1s linear infinite blink_effect;
+}
+
+@keyframes blink_effect {
+0% {
+    visibility: hidden;
+}
+50% {
+    visibility: hidden;
+}
+100% {
+    visibility: visible;
+}
+}
+
+p {
+    width: 150px;
+    font-family: 'Nerko One', cursive;
+    cursor:context-menu;
+}
+
+p.semicolon, p#w_minutes, p#w_seconds{
+    font-size: 120px;
+    width: 100px;
+}
+
+p:hover{
+    /* transform: translateY(-0.14em); */
+    color:#438ff1;
+    transition: 0.05s;
+    animation: pulse 1s infinite;
+    transform: scale(1);
+}
+
+.panel{
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    width: 20rem;
+    padding: 0.01rem;
+    margin-bottom: 30px;
+    border-radius: 10rem;
+    margin-left: 175px;
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.panel p{
+    transition: 0.05s;
+    cursor: pointer;
+}
+
+.panel p.active{
+    color: #ffb648;
+}
+
+#work-timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    width:30rem;
+    border-radius: 50%;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+#circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28rem;
+    width: 28rem;
+    border-radius: 50%;
+    /* background: linear-gradient(to right, #2370d5, #c02558 );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite; */
+    background-color: #438ff1;
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.controls button{
+    border-color: transparent;
+    background-color: transparent;
+    cursor:pointer;
+    margin-left: 605px;
+    margin-top: 60px;
+    font-size: 25px;
+    color: white;
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.controls #book{
+    font-size: 20px;
+}
+.controls #start{
+    margin-right: 645px;
+}
+
+.controls #reset{
+    margin-right: 645px;
+    font-size: 26px;
+}
+.controls #pause{
+    display: none;
+    margin-right: 600px;
+    font-size: 30px;
+    padding-bottom: 0px;
+    padding-left: 8.5px;
+    padding-right: 8.5px;
+    
+}
+#settings{
+    font-size: 24px;
+    margin-right: 640px;
+}
+
+.controls #book:hover{
+    color: #438ff1;
+    transition: 0.05s;
+    
+}
+.controls #start:hover{
+    transition: 0.05s;
+    color:rgb(125, 182, 50);
+}
+.controls #pause:hover{
+    color: #438ff1;
+    transition: 0.05s;
+    
+}
+.controls #reset:hover{
+    color: #438ff1;
+    transition: 0.05s;
+    
+}
+.controls #settings:hover{
+    color: #438ff1;
+    transition: 0.05s;
+}
+
+/* #cl{
+    width: 500px;
+    height: 500px;
+    margin-left: 500px;
+    color: #2370d5;
+} */
+
