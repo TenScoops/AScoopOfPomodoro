@@ -1,6 +1,6 @@
 let workPanel = document.getElementById('work');
 let breakPanel = document.getElementById('break');
-
+//commit
 //buttons
 let start = document.getElementById("start");
 let pause = document.getElementById("pause");
