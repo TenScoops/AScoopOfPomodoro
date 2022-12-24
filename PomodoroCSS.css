@@ -1,8 +1,11 @@
 body {
-	background: linear-gradient(to right, #c02558, #2368c2, #9423d5);
-	background-size: 400% 400%;
+	background: linear-gradient(to right, #c02558, #2368c2, #9423d5); 
+    background-size: 400% 400%;  
 	/* animation: gradient 15s ease infinite; */
-    /* background-color: #30384b; */
+    /* background-color: #33304b; */
+    /* background-color: #49304b; */
+    /* background-color: #8761f1; */
+    /* background-color: rgb(59, 47, 68); */
 }
 
 @keyframes gradient {
@@ -17,6 +20,25 @@ body {
 	}
 }
 
+.user{
+    display: flex;
+    justify-content: right;
+}
+#login{
+    color:white;
+    border-color: #171718;
+    background-color: #171718;
+    font-size: 25px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+#login:hover{
+    border-color: #41414d;
+    background-color: #41414d;
+    cursor: pointer;
+}
+
 h1 {
     color: rgb(255, 255, 255);
     font-family: 'Nerko One', cursive;
@@ -25,10 +47,10 @@ h1 {
     margin-right: 40px;
     margin-bottom: 25px;
     margin-left: 20px;
-    transform: scale(1);
-	animation: pulse 2s infinite;
+    margin-top: 30.5px;
+    
     cursor:pointer;
-    margin-top: 80px;
+    
 
 }
 
@@ -40,11 +62,13 @@ h1:hover{
     transition: 0.05s; 
     /* transform: scale(1);
 	animation: pulse 2s infinite; */
+    transform: scale(1);
+	animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
 	0% {
-		transform: scale(0.95);
+		transform: scale(0.97);
 		
 	}
 
@@ -54,13 +78,13 @@ h1:hover{
 	}
 
 	100% {
-		transform: scale(0.95);
+		transform: scale(0.97);
 		
 	}
 }
 
 #container {
-    height: 89px;
+    height: 175px;
     width: 700px;
     /* background-color: #F5E4C3; */
     margin: 0 auto;
@@ -138,7 +162,9 @@ p:hover{
 }
 
 .panel p.active{
-    color: #ffb648;
+    /* color: #ffb648; */
+    /* color: #438ff1; */
+    color:rgb(37, 204, 255);
 }
 
 #work-timer{
@@ -163,30 +189,33 @@ p:hover{
     /* background: linear-gradient(to right, #2370d5, #c02558 );
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite; */
-    background-color: #438ff1;
+    background-color: #c02558;
     box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    animation: pulse 2s infinite;
+    transform: scale(1);
 }
 
 .controls button{
-    border-color: transparent;
-    background-color: transparent;
+    /* border-color: #303133;
+    background-color: #262729; */
     cursor:pointer;
     margin-left: 605px;
-    margin-top: 60px;
+    margin-top: 50px;
     font-size: 25px;
     color: white;
+    border-color: transparent;
+    background-color: transparent;
     box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
-.controls #book{
-    font-size: 20px;
-}
+
 .controls #start{
     margin-right: 645px;
+    font-size: 30px;
 }
 
 .controls #reset{
@@ -231,10 +260,35 @@ p:hover{
     transition: 0.05s;
 }
 
-/* #cl{
-    width: 500px;
-    height: 500px;
-    margin-left: 500px;
-    color: #2370d5;
-} */
+.colorp{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 180px;
+}
 
+.colorp button{
+    border-color: transparent;
+    background-color: transparent;
+    cursor:pointer;
+    font-size: 21px;
+    color: white;
+    margin-right: 25px;
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.colorp button:hover{
+    color: #438ff1;
+    transition: 0.05s;
+}
+
+#dark:hover{
+    color:rgb(206, 204, 204);
+    transition: 0.05s;
+}
+#light:hover{
+    color: #f1e543;
+    transition: 0.05s;
+}

@@ -13,20 +13,32 @@ sound1.volume = 0.16;
 let sound2 = document.getElementById("timetowork");
 sound2.volume = 0.16;
 
+let sound3 = document.getElementById("breaktime2");
+sound3.volume = 0.25;
+
+let sound4 = document.getElementById("timetowork2");
+sound4.volume = 0.25;
+
+let sound5 = document.getElementById("breaktime3");
+sound5.volume = 0.13;
+
 let soundClick = document.getElementById("click");
 soundClick.volume = 0.32;
 
 let playClick = document.getElementById("joy")
 playClick.volume = 0.32
 
+//timers
 let workTime = 25;
 let breakTime = 10;
 
 let workSeconds = "00";
 let breakSeconds = "00";
 
+let light = document.getElementById("light");
 
-function makeMeTwoDigits(n){//add 0s to clock where needed
+//add 0s to clock where needed
+function makeMeTwoDigits(n){
     return(n < 10 ? "0" : "") + n;
 }
 
@@ -40,9 +52,44 @@ window.onload = () => {
 
 let time;// stores reference to timer variable
 
+let color1 = "#c02558";
+let color2 = "#2368c2";
+let color3 = "#9423d5";
+
+document.getElementById("light").style.display = "none";
+document.getElementById("dark").style.display = "block";
+
+
+//light button
+light.addEventListener('click', function(){
+    soundClick.play();
+    body.style.background = "linear-gradient(to right, " 
+    + color1
+    + ", " 
+    + color2
+    + ", "
+    + color3
+    + ")";
+
+    document.getElementById("light").style.display = "none";
+    document.getElementById("dark").style.display = "block";
+})
+
+light.addEventListener('click', function(){
+    body.style.backgroundSize="400% 400%";
+})
+
+dark.addEventListener('click', function(){
+    soundClick.play();
+    body.style.background = "#33304b";
+    document.getElementById("light").style.display = "block";
+    document.getElementById("dark").style.display = "none";
+})
+
+
 //start button
 start.addEventListener('click', function(){
-//click sound
+//play sound
 playClick.play();
 
     //start timer
@@ -88,7 +135,7 @@ pause.addEventListener('click', function(){
 
     document.getElementById('start').style.display = "block";
     document.getElementById("pause").style.display = "none";
-    document.getElementById("circle").style.backgroundColor = "#438ff1";
+    document.getElementById("circle").style.backgroundColor = "#c02558";
     
 })
 
@@ -110,7 +157,7 @@ reset.addEventListener("click", function(){
     
     workPanel.classList.add('active');
     breakPanel.classList.remove('active');
-    document.getElementById("circle").style.backgroundColor = "#438ff1";
+    document.getElementById("circle").style.backgroundColor = "#c02558";
 
     
 })
@@ -125,7 +172,7 @@ breakPanel.addEventListener('click', function(){
     workPanel.classList.remove('active');
     breakPanel.classList.add('active');
 
-    document.getElementById('circle').style.backgroundColor = "#438ff1";
+    document.getElementById('circle').style.backgroundColor = "#c02558";
     
 
     document.getElementById('start').style.display = "block";
@@ -144,7 +191,7 @@ workPanel.addEventListener('click', function(){
     workPanel.classList.add('active');
     breakPanel.classList.remove('active');
 
-    document.getElementById('circle').style.backgroundColor = "#438ff1";
+    document.getElementById('circle').style.backgroundColor = "#c02558";
 
     document.getElementById('start').style.display = "block";
     document.getElementById("pause").style.display = "none";
@@ -163,7 +210,7 @@ function timer(){
             workSeconds = 59;
             workTime--;
         }else if(workTime === 0 && workSeconds === 0){
-            sound1.play();
+            sound5.play();
             clearInterval(time);
             time = undefined;
         }
@@ -188,6 +235,3 @@ function timer(){
         }
     }
 }
-
-
-//store info and use 

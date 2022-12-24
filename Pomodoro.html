@@ -11,9 +11,12 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 </style>
-<body>
+<body id="body">
     <div class = "div">
-    
+        <div class="user">
+            <button id="login"><i class="fa-solid fa-user"></i></button>
+        </div>
+        
         <h1>Pomodoro</h1>
         
     <div id="container">
@@ -32,6 +35,9 @@
             </div>
             <audio id = "breaktime" src="https://cdn.pixabay.com/audio/2022/03/10/audio_3c8872af8b.mp3"></audio>
             <audio id = "timetowork" src="https://cdn.pixabay.com/audio/2022/10/16/audio_10bebc0b9f.mp3"></audio>
+            <audio id = "breaktime2" src="https://cdn.pixabay.com/audio/2021/08/04/audio_0625c1539c.mp3"></audio>
+            <audio id = "timetowork2" src="https://cdn.pixabay.com/audio/2021/08/04/audio_a233a6ff22.mp3"></audio>
+            <audio id = "breaktime3" src="https://cdn.pixabay.com/audio/2021/10/26/audio_0c72f89df1.mp3"></audio>
         </div>
         
     </div>
@@ -39,7 +45,6 @@
     
     <!-- buttons -->
     <div class="controls">
-        <button id="book"><i class="fa-solid fa-book-open"></i></button>
         <button id="start" ><i class="fa-solid fa-play"></i></button>
         <button id="pause"><i class="fa-solid fa-pause"></i></button>
         <button id="reset" href="/"><i class="fa-solid fa-arrow-rotate-left"></i></button>
@@ -47,8 +52,13 @@
         <audio id ="click"src="https://cdn.pixabay.com/audio/2022/03/15/audio_57ed98e1dc.mp3"></audio>
         <audio id="joy"src="https://cdn.pixabay.com/audio/2022/03/19/audio_b1e725b098.mp3"></audio>
     </div>
-    
+    <div class="colorp">
+        <button id="book"><i class="fa-solid fa-book-open"></i></button>
+        <button id="light"><i class="fa-solid fa-lightbulb"></i></i></button>
+        <button id="dark"><i class="fa-solid fa-lightbulb"></i></i></button>
+    </div>
 </div>
+
     <script src = "PomodoroJS.js"></script>
 </body>
 </html>
